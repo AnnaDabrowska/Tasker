@@ -1,0 +1,7 @@
+%h1= @task.title
+%p= @task.description
+%p= @task.company
+
+= link_to "Start", root_path
+= link_to "Edytuj", edit_task_path(@task)
+= link_to "Usun", task_path(@task), method: :delete, data: {confirm: "Czy chcesz usunac to zadanie?"}
