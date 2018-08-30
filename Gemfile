@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'simple_form', '~> 3.5.0'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
-gem 'haml', '~>4.0.5'
+gem 'haml', '~>5.0.0.beta.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -1,7 +1,8 @@
-= simple_form_for(@task, html: { class 'form-horizontal'}) do |f|
+= simple_form_for(@task, html: { class: 'form-horizontal'}) do |f|
+  = f.collection_select :category_id, Category.all, :id, :name, { prompt: "Wybierz kategorie" }
   = f.input :title, label: "Tytul zadania"
   = f.input :description, label: "Opis zadania"
-  = f.input :company, label: "Twoja firma"
-  = f.input :url, label: "Link do zadania"
+  = f.input :company, label: "Nazwa firmy"
+  = f.input :url, label: "Url zadania"
   %br/
   = f.button :submit
