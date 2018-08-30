@@ -7,7 +7,14 @@
   = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   %body
-    - Category.all.each do |category|
-      = link_to category.name, tasks_path(category: category.name)
-
-    = yield
+    %nav.navbar.navbar-default
+      .container
+        .navbar-brand Tasker
+        %ul.nav.navbar-nav
+          %li= link_to "Wszystkie zadania", root_path
+          - Category.all.each do |category|
+            %li= link_to category.name, tasks_path(category: category.name)
+        = link_to "Nowe zadanie", new_task_path, class: "navbar-text navbar-right navbar-link"
+    .container
+      .col-md-8.col-md-offset-2
+      = yield
